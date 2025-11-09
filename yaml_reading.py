@@ -1,6 +1,5 @@
 from pathlib import Path
 from typing import Optional, Union
-from managers.config_manager import ConfigManager
 from cores.yaml_reading_core.yaml_file import YamlFile
 import yaml
 
