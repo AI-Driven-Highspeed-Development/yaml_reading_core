@@ -25,3 +25,12 @@ class YamlReadingCore:
             return YamlFile(data)
         except yaml.YAMLError:
             raise ValueError("Invalid YAML string:\n" + yaml_str)
+
+    @staticmethod
+    def write_yaml(file_path: Union[str, Path], data: dict) -> None:
+        try:
+            file_path = Path(file_path)
+            with open(file_path, 'w', encoding='utf-8') as file:
+                yaml.safe_dump(data, file, default_flow_style=False, sort_keys=False)
+        except (yaml.YAMLError, IOError) as e:
+            raise IOError(f"Failed to write YAML to '{file_path}': {e}")
