@@ -1,6 +1,6 @@
 from pathlib import Path
 from typing import Optional, Union
-from cores.yaml_reading_core.yaml_file import YamlFile
+from .yaml_file import YamlFile
 import yaml
 
 class YamlReadingCore:

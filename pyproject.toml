@@ -1,0 +1,25 @@
+[project]
+name = "yaml-reading-core"
+version = "0.0.1"
+description = "ADHD Framework core: yaml_reading_core"
+requires-python = ">=3.11"
+dependencies = [
+    "pyyaml>=6.0",
+]
+
+[project.urls]
+Repository = "https://github.com/AI-Driven-Highspeed-Development/yaml_reading_core.git"
+
+[tool.adhd]
+type = "core"
+layer = "foundation"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+
+[tool.hatch.build]
+dev-mode-dirs = [".."]
